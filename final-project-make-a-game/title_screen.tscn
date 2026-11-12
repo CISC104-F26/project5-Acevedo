@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bsceodfd2hxq6"]
+
+[ext_resource type="Script" uid="uid://ccax8gobv07ty" path="res://start_game.gd" id="1_v6p8y"]
+[ext_resource type="Script" uid="uid://bv1nl4chdban2" path="res://quit.gd" id="2_ak2if"]
+
+[node name="TitleScreen" type="Control" unique_id=759336271]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartGame" type="Button" parent="." unique_id=11842366]
+layout_mode = 0
+offset_left = 626.5
+offset_top = 242.0
+offset_right = 1053.5
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 64
+text = "Start Game"
+script = ExtResource("1_v6p8y")
+
+[node name="Quit" type="Button" parent="." unique_id=845045957]
+layout_mode = 0
+offset_left = 626.5
+offset_top = 484.0
+offset_right = 1053.5
+offset_bottom = 697.0
+theme_override_font_sizes/font_size = 64
+text = "Quit"
+script = ExtResource("2_ak2if")
+
+[connection signal="pressed" from="StartGame" to="StartGame" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
