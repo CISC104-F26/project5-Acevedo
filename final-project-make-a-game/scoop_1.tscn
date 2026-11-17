@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://qtrojivky2xo"]
+
+[ext_resource type="Script" uid="uid://c65y8e0n46o30" path="res://test_return.gd" id="1_t3f7h"]
+
+[node name="Scoop1" type="Node2D" unique_id=1727005983]
+
+[node name="TestReturn" type="Button" parent="." unique_id=1426302315]
+offset_left = 533.0
+offset_top = 524.0
+offset_right = 703.0
+offset_bottom = 598.0
+script = ExtResource("1_t3f7h")
+
+[connection signal="pressed" from="TestReturn" to="TestReturn" method="_on_pressed"]

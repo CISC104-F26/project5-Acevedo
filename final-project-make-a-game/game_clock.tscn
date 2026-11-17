@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://be13bgx8wphlw"]
+
+[ext_resource type="Script" uid="uid://ckrb50lfac2bx" path="res://game_clock.gd" id="1_fnpis"]
+
+[node name="GameClock" type="Timer" unique_id=177814370]
+script = ExtResource("1_fnpis")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://chrgigqlvs8f6"]
 
+[ext_resource type="Texture2D" uid="uid://d4ac1mpqntcmd" path="res://Assets/BG_Primitive-12x.png" id="1_ykeeq"]
 [ext_resource type="Script" uid="uid://4c6qvmuk6vp1" path="res://player_character.gd" id="1_yx7mw"]
 [ext_resource type="Texture2D" uid="uid://cjvlkx0d4uk7f" path="res://icon.svg" id="2_ykeeq"]
+[ext_resource type="Script" uid="uid://cx1x748fjsr48" path="res://scoop_cabinet_1.gd" id="4_4srsv"]
+[ext_resource type="Script" uid="uid://c8x4oe503t1k6" path="res://scoop_cabinet_2.gd" id="5_mf81u"]
+[ext_resource type="Script" uid="uid://c5g0q13ww2u42" path="res://scoop_cabinet_3.gd" id="6_02kkc"]
+[ext_resource type="Script" uid="uid://cax7mhmrr8fkr" path="res://restock_area.gd" id="7_aomqu"]
+[ext_resource type="Script" uid="uid://dt7wsgpar64f5" path="res://cups_cones_area.gd" id="8_krmtw"]
+[ext_resource type="Script" uid="uid://b11s0scvtqlme" path="res://order_area.gd" id="9_jgkyn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0fbbt"]
 animations = [{
@@ -22,10 +29,37 @@ size = Vector2(1680, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx7mw"]
 size = Vector2(20, 993)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i1o4x"]
+size = Vector2(1550, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82ao8"]
+size = Vector2(1250, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bclsa"]
+size = Vector2(200, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yj4cr"]
+size = Vector2(50.5, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txvy8"]
+size = Vector2(125, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hl1u"]
+size = Vector2(100, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ht0ft"]
+size = Vector2(64, 40)
+
 [node name="MainGame" type="Node2D" unique_id=1453307233]
 
+[node name="BG" type="Sprite2D" parent="." unique_id=1110683324]
+position = Vector2(840, 472.5)
+scale = Vector2(0.833, 0.833)
+texture = ExtResource("1_ykeeq")
+
 [node name="PlayerCharacter" type="CharacterBody2D" parent="." unique_id=763802361]
-position = Vector2(400, 300)
+position = Vector2(1300, 830)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_yx7mw")
 
 [node name="CharacterSprite" type="AnimatedSprite2D" parent="PlayerCharacter" unique_id=56042403]
@@ -35,20 +69,98 @@ sprite_frames = SubResource("SpriteFrames_0fbbt")
 scale = Vector2(6, 6)
 shape = SubResource("RectangleShape2D_mxyc4")
 
-[node name="Border" type="StaticBody2D" parent="." unique_id=192715097]
+[node name="Impassable" type="StaticBody2D" parent="." unique_id=192715097]
 
-[node name="TopBorder" type="CollisionShape2D" parent="Border" unique_id=1930508175]
+[node name="TopBorder" type="CollisionShape2D" parent="Impassable" unique_id=1930508175]
 position = Vector2(840, -10)
 shape = SubResource("RectangleShape2D_0fbbt")
 
-[node name="RightBorder" type="CollisionShape2D" parent="Border" unique_id=1644881064]
-position = Vector2(-10, 372)
+[node name="RightBorder" type="CollisionShape2D" parent="Impassable" unique_id=1644881064]
+position = Vector2(-10, 470)
 shape = SubResource("RectangleShape2D_yx7mw")
 
-[node name="BottomBorder" type="CollisionShape2D" parent="Border" unique_id=804522581]
+[node name="BottomBorder" type="CollisionShape2D" parent="Impassable" unique_id=804522581]
 position = Vector2(840, 955)
 shape = SubResource("RectangleShape2D_0fbbt")
 
-[node name="LeftBorder" type="CollisionShape2D" parent="Border" unique_id=745490194]
-position = Vector2(1690, 448.5)
+[node name="LeftBorder" type="CollisionShape2D" parent="Impassable" unique_id=745490194]
+position = Vector2(1690, 470)
 shape = SubResource("RectangleShape2D_yx7mw")
+
+[node name="TopCounter" type="CollisionShape2D" parent="Impassable" unique_id=1750086408]
+position = Vector2(775, 672.5)
+shape = SubResource("RectangleShape2D_i1o4x")
+
+[node name="BottomLeftCounter" type="CollisionShape2D" parent="Impassable" unique_id=1145691279]
+position = Vector2(625, 921)
+shape = SubResource("RectangleShape2D_82ao8")
+
+[node name="BottomRightCounter" type="CollisionShape2D" parent="Impassable" unique_id=790358205]
+position = Vector2(1450, 921)
+shape = SubResource("RectangleShape2D_bclsa")
+
+[node name="RightCounter" type="CollisionShape2D" parent="Impassable" unique_id=714191594]
+position = Vector2(1524.5, 797)
+shape = SubResource("RectangleShape2D_yj4cr")
+
+[node name="LeftCounter" type="CollisionShape2D" parent="Impassable" unique_id=740766029]
+position = Vector2(25.75, 797)
+shape = SubResource("RectangleShape2D_yj4cr")
+
+[node name="ScoopCabinet1" type="Area2D" parent="." unique_id=1294789397]
+script = ExtResource("4_4srsv")
+
+[node name="Cab1Coll" type="CollisionShape2D" parent="ScoopCabinet1" unique_id=1784703419]
+position = Vector2(350, 717)
+scale = Vector2(0.7, 1)
+shape = SubResource("RectangleShape2D_txvy8")
+
+[node name="ScoopCabinet2" type="Area2D" parent="." unique_id=1088409796]
+script = ExtResource("5_mf81u")
+
+[node name="Cab2Coll" type="CollisionShape2D" parent="ScoopCabinet2" unique_id=1852909229]
+position = Vector2(500, 717)
+scale = Vector2(0.7, 1)
+shape = SubResource("RectangleShape2D_txvy8")
+
+[node name="ScoopCabinet3" type="Area2D" parent="." unique_id=2103572035]
+script = ExtResource("6_02kkc")
+
+[node name="Cab3Coll" type="CollisionShape2D" parent="ScoopCabinet3" unique_id=795267296]
+position = Vector2(650, 717)
+scale = Vector2(0.7, 1)
+shape = SubResource("RectangleShape2D_txvy8")
+
+[node name="RestockArea" type="Area2D" parent="." unique_id=682553330]
+script = ExtResource("7_aomqu")
+
+[node name="RestockColl" type="CollisionShape2D" parent="RestockArea" unique_id=636217158]
+position = Vector2(1300, 922.5)
+shape = SubResource("RectangleShape2D_1hl1u")
+
+[node name="CupsConesArea" type="Area2D" parent="." unique_id=1391706644]
+script = ExtResource("8_krmtw")
+
+[node name="CupsConesColl" type="CollisionShape2D" parent="CupsConesArea" unique_id=896720775]
+position = Vector2(800, 717)
+shape = SubResource("RectangleShape2D_ht0ft")
+
+[node name="OrderArea" type="Area2D" parent="." unique_id=925686695]
+script = ExtResource("9_jgkyn")
+
+[node name="OrderColl" type="CollisionShape2D" parent="OrderArea" unique_id=72071868]
+position = Vector2(1082, 718)
+shape = SubResource("RectangleShape2D_txvy8")
+
+[connection signal="body_entered" from="ScoopCabinet1" to="PlayerCharacter" method="_on_scoop_cabinet_1_body_entered"]
+[connection signal="body_exited" from="ScoopCabinet1" to="PlayerCharacter" method="_on_scoop_cabinet_1_body_exited"]
+[connection signal="body_entered" from="ScoopCabinet2" to="PlayerCharacter" method="_on_scoop_cabinet_2_body_entered"]
+[connection signal="body_exited" from="ScoopCabinet2" to="PlayerCharacter" method="_on_scoop_cabinet_2_body_exited"]
+[connection signal="body_entered" from="ScoopCabinet3" to="PlayerCharacter" method="_on_scoop_cabinet_3_body_entered"]
+[connection signal="body_exited" from="ScoopCabinet3" to="PlayerCharacter" method="_on_scoop_cabinet_3_body_exited"]
+[connection signal="body_entered" from="RestockArea" to="PlayerCharacter" method="_on_restock_area_body_entered"]
+[connection signal="body_exited" from="RestockArea" to="PlayerCharacter" method="_on_restock_area_body_exited"]
+[connection signal="body_entered" from="CupsConesArea" to="PlayerCharacter" method="_on_cups_cones_area_body_entered"]
+[connection signal="body_exited" from="CupsConesArea" to="PlayerCharacter" method="_on_cups_cones_area_body_exited"]
+[connection signal="body_entered" from="OrderArea" to="PlayerCharacter" method="_on_order_area_body_entered"]
+[connection signal="body_exited" from="OrderArea" to="PlayerCharacter" method="_on_order_area_body_exited"]
