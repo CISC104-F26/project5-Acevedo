@@ -1,3 +1,23 @@
 [gd_scene format=3 uid="uid://d3qt6too30uya"]
 
+[ext_resource type="Texture2D" uid="uid://0k2dnct8vd2j" path="res://Assets/PEACHTub-32x.png" id="1_4rhld"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fbbt"]
+
 [node name="Scoop3" type="Node2D" unique_id=1156393099]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1662646382]
+position = Vector2(250, 150)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1634255134]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_4rhld")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1141010565]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="Label" type="Label" parent="Area2D" unique_id=1058005793]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Peach"
