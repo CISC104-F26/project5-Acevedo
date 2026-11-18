@@ -1,14 +1,243 @@
 [gd_scene format=3 uid="uid://qtrojivky2xo"]
 
 [ext_resource type="Script" uid="uid://c65y8e0n46o30" path="res://test_return.gd" id="1_t3f7h"]
+[ext_resource type="Texture2D" uid="uid://bjgytejviwph1" path="res://Assets/VANTub-32x.png" id="2_5cggr"]
+[ext_resource type="Script" uid="uid://dvehn5gpk36fx" path="res://van_tub.gd" id="2_vk06o"]
+[ext_resource type="Texture2D" uid="uid://sj13trq6x0e1" path="res://Assets/CHOCTub-32x.png" id="3_kcsj8"]
+[ext_resource type="Script" uid="uid://cu580k2u1xuam" path="res://choc_tub.gd" id="4_hxamk"]
+[ext_resource type="Texture2D" uid="uid://cj2g0f16dqise" path="res://Assets/FLUFFTub-32x.png" id="4_isrgk"]
+[ext_resource type="Texture2D" uid="uid://ge4he7s0ysqj" path="res://Assets/RCTub-32x.png" id="5_gqlap"]
+[ext_resource type="Texture2D" uid="uid://351hcahvaxhm" path="res://Assets/MUDTub-32x.png" id="6_hkrn0"]
+[ext_resource type="Script" uid="uid://bfwtg48chggyg" path="res://fluff_tub.gd" id="6_x2uio"]
+[ext_resource type="Texture2D" uid="uid://xu4u4qxyr44t" path="res://Assets/BHTTub-32x.png" id="7_pw57y"]
+[ext_resource type="Script" uid="uid://3e1jedrnc5wp" path="res://rc_tub.gd" id="8_ub8kh"]
+[ext_resource type="Texture2D" uid="uid://cjm84lcr2r6l5" path="res://Assets/1923Tub-32x.png" id="8_vb8a0"]
+[ext_resource type="Texture2D" uid="uid://8em5ikxadeyr" path="res://Assets/PCLTub-32x.png" id="9_0s1bi"]
+[ext_resource type="Script" uid="uid://boqssmjqkjfia" path="res://mud_tub.gd" id="10_7133e"]
+[ext_resource type="Texture2D" uid="uid://786tmfymx5ss" path="res://Assets/GMATub-32x.png" id="10_ov4oe"]
+[ext_resource type="Script" uid="uid://cxhwr06tlfxkn" path="res://bht_tub.gd" id="12_yas4m"]
+[ext_resource type="Script" uid="uid://cb07v3jl371u1" path="res://1923_tub.gd" id="14_yocqb"]
+[ext_resource type="Script" uid="uid://dgppsbm5qq313" path="res://pcl_tub.gd" id="16_j6hih"]
+[ext_resource type="Script" uid="uid://bcongqafi3kn6" path="res://gma_tub.gd" id="18_0po0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fbbt"]
 
 [node name="Scoop1" type="Node2D" unique_id=1727005983]
 
 [node name="TestReturn" type="Button" parent="." unique_id=1426302315]
-offset_left = 533.0
-offset_top = 524.0
-offset_right = 703.0
-offset_bottom = 598.0
+visible = false
+offset_left = 8.0
+offset_top = 865.0
+offset_right = 178.0
+offset_bottom = 939.0
 script = ExtResource("1_t3f7h")
 
+[node name="VANtub" type="Area2D" parent="." unique_id=737186976]
+position = Vector2(250, 150)
+script = ExtResource("2_vk06o")
+
+[node name="VANsprite" type="Sprite2D" parent="VANtub" unique_id=1355434169]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_5cggr")
+
+[node name="VANcoll" type="CollisionShape2D" parent="VANtub" unique_id=1573729285]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="VANlabel" type="Label" parent="VANtub" unique_id=1523286242]
+visible = false
+offset_left = -57.0
+offset_top = 111.0
+offset_right = 60.0
+offset_bottom = 161.0
+theme_override_font_sizes/font_size = 36
+text = "Vanilla"
+horizontal_alignment = 1
+
+[node name="CHOCtub" type="Area2D" parent="." unique_id=2087291372]
+position = Vector2(840, 150)
+script = ExtResource("4_hxamk")
+
+[node name="CHOCsprite" type="Sprite2D" parent="CHOCtub" unique_id=269651192]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_kcsj8")
+
+[node name="CHOCcoll" type="CollisionShape2D" parent="CHOCtub" unique_id=511277512]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="CHOClabel" type="Label" parent="CHOCtub" unique_id=2117457964]
+visible = false
+offset_left = -84.0
+offset_top = 112.0
+offset_right = 89.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 36
+text = "Chocolate"
+
+[node name="FLUFFtub" type="Area2D" parent="." unique_id=48693108]
+position = Vector2(1430, 150)
+script = ExtResource("6_x2uio")
+
+[node name="FLUFFsprite" type="Sprite2D" parent="FLUFFtub" unique_id=1900446262]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_isrgk")
+
+[node name="FLUFFcoll" type="CollisionShape2D" parent="FLUFFtub" unique_id=1024269386]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="FLUFFlabel" type="Label" parent="FLUFFtub" unique_id=318660894]
+visible = false
+offset_left = -153.0
+offset_top = 110.0
+offset_right = 159.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 36
+text = "Holy Fluffernutter"
+
+[node name="RCtub" type="Area2D" parent="." unique_id=1619922947]
+position = Vector2(250, 450)
+script = ExtResource("8_ub8kh")
+
+[node name="RCsprite" type="Sprite2D" parent="RCtub" unique_id=1520626037]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_gqlap")
+
+[node name="RCcoll" type="CollisionShape2D" parent="RCtub" unique_id=229184357]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="RClabel" type="Label" parent="RCtub" unique_id=1027382596]
+visible = false
+offset_left = -194.0
+offset_top = 111.0
+offset_right = 198.0
+offset_bottom = 161.0
+theme_override_font_sizes/font_size = 36
+text = "Raspberry Cheesecake"
+
+[node name="MUDtub" type="Area2D" parent="." unique_id=936144982]
+position = Vector2(840, 450)
+script = ExtResource("10_7133e")
+
+[node name="MUDsprite" type="Sprite2D" parent="MUDtub" unique_id=1576203466]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_hkrn0")
+
+[node name="MUDcoll" type="CollisionShape2D" parent="MUDtub" unique_id=1210505804]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="MUDlabel" type="Label" parent="MUDtub" unique_id=740852467]
+visible = false
+offset_left = -207.0
+offset_top = 110.0
+offset_right = 206.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 36
+text = "Delaware River Mud Pie"
+
+[node name="BHTtub" type="Area2D" parent="." unique_id=2077568958]
+position = Vector2(1430, 450)
+script = ExtResource("12_yas4m")
+
+[node name="BHTsprite" type="Sprite2D" parent="BHTtub" unique_id=985035138]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_pw57y")
+
+[node name="BHTcoll" type="CollisionShape2D" parent="BHTtub" unique_id=1712380531]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="BHTlabel" type="Label" parent="BHTtub" unique_id=1284563070]
+visible = false
+offset_left = -138.0
+offset_top = 110.0
+offset_right = 141.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 36
+text = "Blue Hen Tracks"
+
+[node name="NINEtub" type="Area2D" parent="." unique_id=422581628]
+position = Vector2(250, 750)
+script = ExtResource("14_yocqb")
+
+[node name="NINEsprite" type="Sprite2D" parent="NINEtub" unique_id=77025783]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_vb8a0")
+
+[node name="NINEcoll" type="CollisionShape2D" parent="NINEtub" unique_id=1874608230]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="NINElabel" type="Label" parent="NINEtub" unique_id=1243075566]
+visible = false
+offset_left = -40.0
+offset_top = 112.0
+offset_right = 42.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 36
+text = "1923"
+
+[node name="PCLtub" type="Area2D" parent="." unique_id=1277621135]
+position = Vector2(840, 750)
+script = ExtResource("16_j6hih")
+
+[node name="PCLsprite" type="Sprite2D" parent="PCLtub" unique_id=310506114]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_0s1bi")
+
+[node name="PCLcoll" type="CollisionShape2D" parent="PCLtub" unique_id=1597495088]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="PCLlabel" type="Label" parent="PCLtub" unique_id=3176347]
+visible = false
+offset_left = -162.0
+offset_top = 112.0
+offset_right = 168.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 36
+text = "Peanut Cocoa Loco"
+
+[node name="GMAtub" type="Area2D" parent="." unique_id=2128128077]
+position = Vector2(1430, 750)
+script = ExtResource("18_0po0i")
+
+[node name="GMAsprite" type="Sprite2D" parent="GMAtub" unique_id=1317689519]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_ov4oe")
+
+[node name="GMAcoll" type="CollisionShape2D" parent="GMAtub" unique_id=1648484328]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="GMAlabel" type="Label" parent="GMAtub" unique_id=1222812656]
+visible = false
+offset_left = -229.0
+offset_top = 112.0
+offset_right = 233.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 36
+text = "Grandma's Gone Coconuts"
+
 [connection signal="pressed" from="TestReturn" to="TestReturn" method="_on_pressed"]
+[connection signal="mouse_entered" from="VANtub" to="VANtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="VANtub" to="VANtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CHOCtub" to="CHOCtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CHOCtub" to="CHOCtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="FLUFFtub" to="FLUFFtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="FLUFFtub" to="FLUFFtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="RCtub" to="RCtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RCtub" to="RCtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="MUDtub" to="MUDtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MUDtub" to="MUDtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="BHTtub" to="BHTtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BHTtub" to="BHTtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="NINEtub" to="NINEtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="NINEtub" to="NINEtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PCLtub" to="PCLtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PCLtub" to="PCLtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="GMAtub" to="GMAtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="GMAtub" to="GMAtub" method="_on_mouse_exited"]
