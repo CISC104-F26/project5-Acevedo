@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameClock="*uid://be13bgx8wphlw"
+Globalvar="*uid://brdr4uwn3qcna"
 
 [display]
 
