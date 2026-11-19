@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bsceodfd2hxq6"]
 
+[ext_resource type="Texture2D" uid="uid://bjgytejviwph1" path="res://Assets/VANTub-32x.png" id="1_05l2w"]
 [ext_resource type="Script" uid="uid://ccax8gobv07ty" path="res://start_game.gd" id="1_v6p8y"]
 [ext_resource type="Script" uid="uid://bv1nl4chdban2" path="res://quit.gd" id="2_ak2if"]
+[ext_resource type="Texture2D" uid="uid://sj13trq6x0e1" path="res://Assets/CHOCTub-32x.png" id="3_hafda"]
 
 [node name="TitleScreen" type="Control" unique_id=759336271]
 layout_mode = 3
@@ -14,21 +16,30 @@ grow_vertical = 2
 [node name="StartGame" type="Button" parent="." unique_id=11842366]
 layout_mode = 0
 offset_left = 626.5
-offset_top = 242.0
-offset_right = 1053.5
-offset_bottom = 455.0
+offset_top = 100.0
+offset_right = 1594.5
+offset_bottom = 748.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.22670722, 0.22670752, 0.22670802, 1)
 theme_override_font_sizes/font_size = 64
 text = "Start Game"
+icon = ExtResource("1_05l2w")
+icon_alignment = 1
 script = ExtResource("1_v6p8y")
 
 [node name="Quit" type="Button" parent="." unique_id=845045957]
 layout_mode = 0
 offset_left = 626.5
 offset_top = 484.0
-offset_right = 1053.5
-offset_bottom = 697.0
+offset_right = 1594.5
+offset_bottom = 1132.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_hover_color = Color(0.73467976, 0.7346799, 0.73468065, 1)
 theme_override_font_sizes/font_size = 64
 text = "Quit"
+icon = ExtResource("3_hafda")
+icon_alignment = 1
 script = ExtResource("2_ak2if")
 
 [connection signal="pressed" from="StartGame" to="StartGame" method="_on_pressed"]

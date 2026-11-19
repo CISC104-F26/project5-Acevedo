@@ -1,23 +1,189 @@
 [gd_scene format=3 uid="uid://d3qt6too30uya"]
 
 [ext_resource type="Texture2D" uid="uid://0k2dnct8vd2j" path="res://Assets/PEACHTub-32x.png" id="1_4rhld"]
+[ext_resource type="Script" uid="uid://b4m3dv8tug1ui" path="res://peach_tub.gd" id="1_re77b"]
+[ext_resource type="Texture2D" uid="uid://daiqgkngapian" path="res://Assets/BRTub-32x.png" id="2_q51ws"]
+[ext_resource type="Script" uid="uid://c2c18qpqv8g1s" path="res://br_tub.gd" id="3_0vqnd"]
+[ext_resource type="Texture2D" uid="uid://cvi4w08t5hxus" path="res://Assets/STRAWTub-32x.png" id="3_re77b"]
+[ext_resource type="Texture2D" uid="uid://rr647pm8cp6i" path="res://Assets/CoffeeTub-32x.png" id="4_iwlct"]
+[ext_resource type="Script" uid="uid://b4rkjlsi5eenk" path="res://straw_tub.gd" id="5_2pm76"]
+[ext_resource type="Texture2D" uid="uid://ddtnjss41dhy" path="res://Assets/BPTub-32x.png" id="5_uuwu0"]
+[ext_resource type="Texture2D" uid="uid://bnnd2a061aomb" path="res://Assets/BINGTub-32x.png" id="6_635yg"]
+[ext_resource type="Script" uid="uid://dpif1o46nr2yc" path="res://coffee_tub.gd" id="7_4qc84"]
+[ext_resource type="Texture2D" uid="uid://bkqpt63nc70dx" path="res://Assets/UBETub-32x.png" id="7_l3o15"]
+[ext_resource type="Script" uid="uid://bma8x63mjusdm" path="res://bp_tub.gd" id="9_025oc"]
+[ext_resource type="Script" uid="uid://cipl0umllx0no" path="res://bing_tub.gd" id="11_tkade"]
+[ext_resource type="Script" uid="uid://ddgjcfeox6mve" path="res://ube_tub.gd" id="13_qcwas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fbbt"]
 
 [node name="Scoop3" type="Node2D" unique_id=1156393099]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1662646382]
+[node name="PEACHtub" type="Area2D" parent="." unique_id=1662646382]
 position = Vector2(250, 150)
+script = ExtResource("1_re77b")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1634255134]
+[node name="PEACHsprite" type="Sprite2D" parent="PEACHtub" unique_id=1634255134]
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_4rhld")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1141010565]
+[node name="PEACHcoll" type="CollisionShape2D" parent="PEACHtub" unique_id=1141010565]
 scale = Vector2(18, 11.5)
 shape = SubResource("RectangleShape2D_0fbbt")
 
-[node name="Label" type="Label" parent="Area2D" unique_id=1058005793]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="PEACHlabel" type="Label" parent="PEACHtub" unique_id=1058005793]
+visible = false
+offset_left = -50.0
+offset_top = 112.0
+offset_right = 55.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 36
 text = "Peach"
+horizontal_alignment = 1
+
+[node name="BRtub" type="Area2D" parent="." unique_id=524832132]
+position = Vector2(840, 150)
+script = ExtResource("3_0vqnd")
+
+[node name="BRsprite" type="Sprite2D" parent="BRtub" unique_id=1315916948]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_q51ws")
+
+[node name="BRcoll" type="CollisionShape2D" parent="BRtub" unique_id=266682644]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="BRlabel" type="Label" parent="BRtub" unique_id=1693283543]
+visible = false
+offset_left = -139.0
+offset_top = 112.0
+offset_right = 141.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 36
+text = "Black Raspberry"
+horizontal_alignment = 1
+
+[node name="STRAWtub" type="Area2D" parent="." unique_id=1205372495]
+position = Vector2(1430, 150)
+script = ExtResource("5_2pm76")
+
+[node name="STRAWsprite" type="Sprite2D" parent="STRAWtub" unique_id=1771152207]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_re77b")
+
+[node name="STRAWcoll" type="CollisionShape2D" parent="STRAWtub" unique_id=157970825]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="STRAWlabel" type="Label" parent="STRAWtub" unique_id=506507944]
+visible = false
+offset_left = -139.0
+offset_top = 112.0
+offset_right = 141.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 36
+text = "Strawberry"
+horizontal_alignment = 1
+
+[node name="COFFEEtub" type="Area2D" parent="." unique_id=1949362141]
+position = Vector2(840, 450)
+script = ExtResource("7_4qc84")
+
+[node name="COFFEEsprite" type="Sprite2D" parent="COFFEEtub" unique_id=292331794]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_iwlct")
+
+[node name="COFFEEcoll" type="CollisionShape2D" parent="COFFEEtub" unique_id=1961626070]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="COFFEElabel" type="Label" parent="COFFEEtub" unique_id=1060252017]
+visible = false
+offset_left = -139.0
+offset_top = 112.0
+offset_right = 141.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 36
+text = "Coffee"
+horizontal_alignment = 1
+
+[node name="BPtub" type="Area2D" parent="." unique_id=504962463]
+position = Vector2(1430, 450)
+script = ExtResource("9_025oc")
+
+[node name="BPsprite" type="Sprite2D" parent="BPtub" unique_id=2066543922]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_uuwu0")
+
+[node name="BPcoll" type="CollisionShape2D" parent="BPtub" unique_id=990606273]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="BPlabel" type="Label" parent="BPtub" unique_id=1047153068]
+visible = false
+offset_left = -139.0
+offset_top = 112.0
+offset_right = 141.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 36
+text = "Butter Pecan"
+horizontal_alignment = 1
+
+[node name="BINGtub" type="Area2D" parent="." unique_id=1688376932]
+position = Vector2(840, 750)
+script = ExtResource("11_tkade")
+
+[node name="BINGsprite" type="Sprite2D" parent="BINGtub" unique_id=1611825301]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_635yg")
+
+[node name="BINGcoll" type="CollisionShape2D" parent="BINGtub" unique_id=374084115]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="BINGlabel" type="Label" parent="BINGtub" unique_id=1908468849]
+visible = false
+offset_left = -166.0
+offset_top = 111.0
+offset_right = 171.0
+offset_bottom = 161.0
+theme_override_font_sizes/font_size = 36
+text = "Blissful Bing Cherry"
+horizontal_alignment = 1
+
+[node name="UBEtub" type="Area2D" parent="." unique_id=605365109]
+position = Vector2(1430, 750)
+script = ExtResource("13_qcwas")
+
+[node name="UBEsprite" type="Sprite2D" parent="UBEtub" unique_id=1356562632]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_l3o15")
+
+[node name="UBEcoll" type="CollisionShape2D" parent="UBEtub" unique_id=463443529]
+scale = Vector2(18, 11.5)
+shape = SubResource("RectangleShape2D_0fbbt")
+
+[node name="UBElabel" type="Label" parent="UBEtub" unique_id=523483628]
+visible = false
+offset_left = -166.0
+offset_top = 111.0
+offset_right = 171.0
+offset_bottom = 161.0
+theme_override_font_sizes/font_size = 36
+text = "U-Be-Be-Baby"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="PEACHtub" to="PEACHtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PEACHtub" to="PEACHtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="BRtub" to="BRtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BRtub" to="BRtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="STRAWtub" to="STRAWtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="STRAWtub" to="STRAWtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="COFFEEtub" to="COFFEEtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="COFFEEtub" to="COFFEEtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="BPtub" to="BPtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BPtub" to="BPtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="BINGtub" to="BINGtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BINGtub" to="BINGtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="UBEtub" to="UBEtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="UBEtub" to="UBEtub" method="_on_mouse_exited"]

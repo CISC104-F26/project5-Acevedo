@@ -1,13 +1,21 @@
 [gd_scene format=3 uid="uid://b63ds5057osx2"]
 
 [ext_resource type="Texture2D" uid="uid://bvkday2i422d4" path="res://Assets/MCCTub-32x.png" id="1_b7cb2"]
+[ext_resource type="Script" uid="uid://c0irdyt76xll6" path="res://mcc_tub.gd" id="1_vf73h"]
 [ext_resource type="Texture2D" uid="uid://c873av8caq4n0" path="res://Assets/MNCTub-32x.png" id="2_ydxl6"]
+[ext_resource type="Script" uid="uid://bi1m3kphtm2kn" path="res://mnc_tub.gd" id="3_gw66u"]
 [ext_resource type="Texture2D" uid="uid://du0e8trj44itp" path="res://Assets/PGTTub-32x.png" id="3_vf73h"]
 [ext_resource type="Texture2D" uid="uid://ctq31o3jn8tpi" path="res://Assets/ANTub-32x.png" id="4_gw66u"]
+[ext_resource type="Script" uid="uid://cq5lbgo8vrb8y" path="res://pgt_tub.gd" id="5_6272a"]
 [ext_resource type="Texture2D" uid="uid://bh7dk7fc20wrv" path="res://Assets/CNCTub-32x.png" id="5_phbh2"]
 [ext_resource type="Texture2D" uid="uid://ce3ln1befasdn" path="res://Assets/NOMTub-32x.png" id="6_6272a"]
+[ext_resource type="Script" uid="uid://cneieqdwiuvga" path="res://an_tub.gd" id="7_6272a"]
 [ext_resource type="Texture2D" uid="uid://dp8iyoqosbj4f" path="res://Assets/TONATub-32x.png" id="7_d85af"]
 [ext_resource type="Texture2D" uid="uid://c2hsoeummbkm8" path="res://Assets/CDDTub-32x.png" id="8_k2g43"]
+[ext_resource type="Script" uid="uid://cx526krwfngym" path="res://cnc_tub.gd" id="9_d85af"]
+[ext_resource type="Script" uid="uid://c16r12xrbmobl" path="res://nom_tub.gd" id="11_k2g43"]
+[ext_resource type="Script" uid="uid://cwx5ddyoa7eyj" path="res://tona_tub.gd" id="13_ofqx3"]
+[ext_resource type="Script" uid="uid://cbtfcya2vdo84" path="res://cdd_tub.gd" id="15_erst3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxamk"]
 
@@ -15,6 +23,7 @@
 
 [node name="MCCtub" type="Area2D" parent="." unique_id=501144491]
 position = Vector2(250, 150)
+script = ExtResource("1_vf73h")
 
 [node name="MCCsprite" type="Sprite2D" parent="MCCtub" unique_id=83900837]
 scale = Vector2(0.4, 0.4)
@@ -25,6 +34,7 @@ scale = Vector2(18, 11.5)
 shape = SubResource("RectangleShape2D_hxamk")
 
 [node name="MCClabel" type="Label" parent="MCCtub" unique_id=1388644072]
+visible = false
 offset_left = -175.0
 offset_top = 115.0
 offset_right = 175.0
@@ -35,6 +45,7 @@ horizontal_alignment = 1
 
 [node name="MNCtub" type="Area2D" parent="." unique_id=1690183077]
 position = Vector2(840, 150)
+script = ExtResource("3_gw66u")
 
 [node name="MNCsprite" type="Sprite2D" parent="MNCtub" unique_id=296999119]
 scale = Vector2(0.4, 0.4)
@@ -45,6 +56,7 @@ scale = Vector2(18, 11.5)
 shape = SubResource("RectangleShape2D_hxamk")
 
 [node name="MNClabel" type="Label" parent="MNCtub" unique_id=985004222]
+visible = false
 offset_left = -129.0
 offset_top = 114.0
 offset_right = 134.0
@@ -54,6 +66,7 @@ text = "Mint & Cookies"
 
 [node name="PGTtub" type="Area2D" parent="." unique_id=2106560855]
 position = Vector2(1430, 150)
+script = ExtResource("5_6272a")
 
 [node name="PGTsprite" type="Sprite2D" parent="PGTtub" unique_id=2101400009]
 scale = Vector2(0.4, 0.4)
@@ -64,6 +77,7 @@ scale = Vector2(18, 11.5)
 shape = SubResource("RectangleShape2D_hxamk")
 
 [node name="PGTlabel" type="Label" parent="PGTtub" unique_id=1909699395]
+visible = false
 offset_left = -144.0
 offset_top = 111.0
 offset_right = 151.0
@@ -73,6 +87,7 @@ text = "Peach Green Tea"
 
 [node name="ANtub" type="Area2D" parent="." unique_id=1274544522]
 position = Vector2(250, 450)
+script = ExtResource("7_6272a")
 
 [node name="ANsprite" type="Sprite2D" parent="ANtub" unique_id=1154164336]
 scale = Vector2(0.4, 0.4)
@@ -83,6 +98,7 @@ scale = Vector2(18, 11.5)
 shape = SubResource("RectangleShape2D_hxamk")
 
 [node name="ANlabel" type="Label" parent="ANtub" unique_id=1273082097]
+visible = false
 offset_left = -175.0
 offset_top = 115.0
 offset_right = 175.0
@@ -93,6 +109,7 @@ horizontal_alignment = 1
 
 [node name="CNCtub" type="Area2D" parent="." unique_id=2016984502]
 position = Vector2(840, 450)
+script = ExtResource("9_d85af")
 
 [node name="CNCsprite" type="Sprite2D" parent="CNCtub" unique_id=1413661177]
 scale = Vector2(0.4, 0.4)
@@ -103,6 +120,7 @@ scale = Vector2(18, 11.5)
 shape = SubResource("RectangleShape2D_hxamk")
 
 [node name="CNClabel" type="Label" parent="CNCtub" unique_id=1369735685]
+visible = false
 offset_left = -175.0
 offset_top = 115.0
 offset_right = 175.0
@@ -113,6 +131,7 @@ horizontal_alignment = 1
 
 [node name="NOMtub" type="Area2D" parent="." unique_id=1541209339]
 position = Vector2(1430, 450)
+script = ExtResource("11_k2g43")
 
 [node name="NOMsprite" type="Sprite2D" parent="NOMtub" unique_id=2079425889]
 scale = Vector2(0.4, 0.4)
@@ -123,6 +142,7 @@ scale = Vector2(18, 11.5)
 shape = SubResource("RectangleShape2D_hxamk")
 
 [node name="NOMlabel" type="Label" parent="NOMtub" unique_id=185670980]
+visible = false
 offset_left = -175.0
 offset_top = 115.0
 offset_right = 175.0
@@ -133,6 +153,7 @@ horizontal_alignment = 1
 
 [node name="TONAtub" type="Area2D" parent="." unique_id=1037626331]
 position = Vector2(250, 750)
+script = ExtResource("13_ofqx3")
 
 [node name="TONAsprite" type="Sprite2D" parent="TONAtub" unique_id=1570343473]
 scale = Vector2(0.4, 0.4)
@@ -143,6 +164,7 @@ scale = Vector2(18, 11.5)
 shape = SubResource("RectangleShape2D_hxamk")
 
 [node name="TONAlabel" type="Label" parent="TONAtub" unique_id=229920345]
+visible = false
 offset_left = -175.0
 offset_top = 115.0
 offset_right = 175.0
@@ -153,6 +175,7 @@ horizontal_alignment = 1
 
 [node name="CDDtub" type="Area2D" parent="." unique_id=1737883630]
 position = Vector2(840, 750)
+script = ExtResource("15_erst3")
 
 [node name="CDDsprite" type="Sprite2D" parent="CDDtub" unique_id=1989158752]
 scale = Vector2(0.4, 0.4)
@@ -163,6 +186,7 @@ scale = Vector2(18, 11.5)
 shape = SubResource("RectangleShape2D_hxamk")
 
 [node name="CDDlabel" type="Label" parent="CDDtub" unique_id=1384380648]
+visible = false
 offset_left = -208.0
 offset_top = 115.0
 offset_right = 211.0
@@ -170,3 +194,20 @@ offset_bottom = 165.0
 theme_override_font_sizes/font_size = 36
 text = "Cookie Dough Dynamite"
 horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="MCCtub" to="MCCtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MCCtub" to="MCCtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="MNCtub" to="MNCtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MNCtub" to="MNCtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PGTtub" to="PGTtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PGTtub" to="PGTtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ANtub" to="ANtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ANtub" to="ANtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CNCtub" to="CNCtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CNCtub" to="CNCtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="NOMtub" to="NOMtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="NOMtub" to="NOMtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="TONAtub" to="TONAtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TONAtub" to="TONAtub" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CDDtub" to="CDDtub" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CDDtub" to="CDDtub" method="_on_mouse_exited"]

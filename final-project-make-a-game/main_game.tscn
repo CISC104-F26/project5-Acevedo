@@ -70,6 +70,7 @@ scale = Vector2(6, 6)
 shape = SubResource("RectangleShape2D_mxyc4")
 
 [node name="Instructions" type="Label" parent="PlayerCharacter" unique_id=1363676154]
+visible = false
 offset_left = -18.0
 offset_top = 66.0
 offset_right = 22.0

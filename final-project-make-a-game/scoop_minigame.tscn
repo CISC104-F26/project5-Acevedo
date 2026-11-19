@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c4svy387fts7j"]
+
+[ext_resource type="Script" uid="uid://c65y8e0n46o30" path="res://test_return.gd" id="1_40nr7"]
+
+[node name="ScoopMinigame" type="Node2D" unique_id=52742447]
+
+[node name="TestReturn" type="Button" parent="." unique_id=117384007]
+offset_left = 8.0
+offset_top = 865.0
+offset_right = 178.0
+offset_bottom = 939.0
+script = ExtResource("1_40nr7")
+
+[connection signal="pressed" from="TestReturn" to="TestReturn" method="_on_pressed"]

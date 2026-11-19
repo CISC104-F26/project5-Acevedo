@@ -33,6 +33,12 @@ func _process(delta: float) -> void:
 	if Cab1Scoopable and Input.is_action_just_pressed("Interact"):
 		Globalvar.savedposition = position
 		get_tree().change_scene_to_file("res://scoop_1.tscn")
+	elif Cab2Scoopable and Input.is_action_just_pressed("Interact"):
+		Globalvar.savedposition = position
+		get_tree().change_scene_to_file("res://scoop_2.tscn")
+	elif Cab3Scoopable and Input.is_action_just_pressed("Interact"):
+		Globalvar.savedposition = position
+		get_tree().change_scene_to_file("res://scoop_3.tscn")
 	else: pass
 
 func _on_scoop_cabinet_1_body_entered(body: Node2D) -> void:
