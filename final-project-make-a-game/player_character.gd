@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name player extends CharacterBody2D
 
 var Cab1Scoopable = false
 var Cab2Scoopable = false
@@ -40,31 +40,31 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://scoop_3.tscn")
 	else: pass
 
-func _on_scoop_cabinet_1_body_entered(body: Node2D) -> void:
+func _on_scoop_cabinet_1_body_entered(body: player) -> void:
 	Cab1Scoopable = true
 	$Instructions.text = "[SPACE] To Scoop"
 
 
-func _on_scoop_cabinet_1_body_exited(body: Node2D) -> void:
+func _on_scoop_cabinet_1_body_exited(body: player) -> void:
 	Cab1Scoopable = false
 	$Instructions.text = ""
 
 
-func _on_scoop_cabinet_2_body_entered(body: Node2D) -> void:
+func _on_scoop_cabinet_2_body_entered(body: player) -> void:
 	Cab2Scoopable = true
 	$Instructions.text = "[SPACE] To Scoop"
 
 
-func _on_scoop_cabinet_2_body_exited(body: Node2D) -> void:
+func _on_scoop_cabinet_2_body_exited(body: player) -> void:
 	Cab2Scoopable = false
 	$Instructions.text = ""
 
 
-func _on_scoop_cabinet_3_body_entered(body: Node2D) -> void:
+func _on_scoop_cabinet_3_body_entered(body: player) -> void:
 	Cab3Scoopable = true
 	$Instructions.text = "[SPACE] To Scoop"
 
-func _on_scoop_cabinet_3_body_exited(body: Node2D) -> void:
+func _on_scoop_cabinet_3_body_exited(body: player) -> void:
 	Cab3Scoopable = false
 	$Instructions.text = ""
 
