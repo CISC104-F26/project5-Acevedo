@@ -10,6 +10,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if NINEscoopable and Input.is_action_just_pressed("select"):
+		Globalvar.scoopingNINE = true
 		get_tree().change_scene_to_file("res://scoop_minigame.tscn")
 	pass
 

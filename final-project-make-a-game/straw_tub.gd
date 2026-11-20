@@ -9,7 +9,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if STRAWscoopable and Input.is_action_just_pressed("Interact"):
+	if STRAWscoopable and Input.is_action_just_pressed("select"):
+		Globalvar.scoopingSTRAW = true
 		get_tree().change_scene_to_file("res://scoop_minigame.tscn")
 	pass
 
