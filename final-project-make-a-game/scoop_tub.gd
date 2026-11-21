@@ -6,83 +6,108 @@ var hardness = 0
 func _ready() -> void:
 	if Globalvar.scoopingVAN:
 		frame = 0
+		$ScoopProgress.texture_progress = preload("res://Assets/VANprog-32x.png")
 		hardness = randi_range(6,12)
 	elif Globalvar.scoopingCHOC:
 		frame = 1
+		$ScoopProgress.texture_progress = preload("res://Assets/CHOCprog-32x.png")
 		hardness = randi_range(10,25)
 	elif Globalvar.scoopingFLUFF:
 		frame = 2
+		$ScoopProgress.texture_progress = preload("res://Assets/FLUFFprog-32x.png")
 		hardness = randi_range(15,30)
 	elif Globalvar.scoopingRC:
 		frame = 3
+		$ScoopProgress.texture_progress = preload("res://Assets/RCprog-32x.png")
 		hardness = randi_range(5,10)
 	elif Globalvar.scoopingMUD:
 		frame = 4
+		$ScoopProgress.texture_progress = preload("res://Assets/MUDprog-32x.png")
 		hardness = randi_range(6,30)
 	elif Globalvar.scoopingBHT:
 		frame = 5
+		$ScoopProgress.texture_progress = preload("res://Assets/BHTprog-32x.png")
 		hardness = randi_range(10,20)
 	elif Globalvar.scoopingNINE:
 		frame = 6
+		$ScoopProgress.texture_progress = preload("res://Assets/1923prog-32x.png")
 		hardness = randi_range(6,15)
 	elif Globalvar.scoopingPCL:
 		frame = 7
+		$ScoopProgress.texture_progress = preload("res://Assets/PCLprog-32x.png")
 		hardness = randi_range(15,60)
 	elif Globalvar.scoopingGMA:
 		frame = 8
+		$ScoopProgress.texture_progress = preload("res://Assets/GMAprog-32x.png")
 		hardness = randi_range(10,25)
 	elif Globalvar.scoopingMCC:
 		frame = 9
+		$ScoopProgress.texture_progress = preload("res://Assets/MCCprog-32x.png")
 		hardness = randi_range(8,16)
 	elif Globalvar.scoopingMNC:
 		frame = 10
+		$ScoopProgress.texture_progress = preload("res://Assets/MNCprog-32x.png")
 		hardness = randi_range(7,15)
 	elif Globalvar.scoopingPGT:
 		frame = 11
+		$ScoopProgress.texture_progress = preload("res://Assets/PGTprog-32x.png")
 		hardness = randi_range(5,15)
 	elif Globalvar.scoopingAN:
 		frame = 12
+		$ScoopProgress.texture_progress = preload("res://Assets/ANprog-32x.png")
 		hardness = randi_range(10,25)
 	elif Globalvar.scoopingCNC:
 		frame = 13
+		$ScoopProgress.texture_progress = preload("res://Assets/CNCprog-32x.png")
 		hardness = randi_range(7,15)
 	elif Globalvar.scoopingNOM:
 		frame = 14
+		$ScoopProgress.texture_progress = preload("res://Assets/NOMprog-32x.png")
 		hardness = randi_range(10,25)
 	elif Globalvar.scoopingTONA:
 		frame = 15
+		$ScoopProgress.texture_progress = preload("res://Assets/TONAprog-32x.png")
 		hardness = randi_range(3,10)
 	elif Globalvar.scoopingCDD:
 		frame = 16
+		$ScoopProgress.texture_progress = preload("res://Assets/CDDprog-32x.png")
 		hardness = randi_range(5,20)
 	elif Globalvar.scoopingPEACH:
 		frame = 17
+		$ScoopProgress.texture_progress = preload("res://Assets/PEACHprog-32x.png")
 		hardness = randi_range(8,25)
 	elif Globalvar.scoopingBR:
 		frame = 18
+		$ScoopProgress.texture_progress = preload("res://Assets/BRprog-32x.png")
 		hardness = randi_range(5,10)
 	elif Globalvar.scoopingSTRAW:
 		frame = 19
+		$ScoopProgress.texture_progress = preload("res://Assets/STRAWprog-32x.png")
 		hardness = randi_range(8,20)
 	elif Globalvar.scoopingCOFFEE:
 		frame = 20
+		$ScoopProgress.texture_progress = preload("res://Assets/COFFEEprog-32x.png")
 		hardness = randi_range(8,20)
 	elif Globalvar.scoopingBP:
 		frame = 21
+		$ScoopProgress.texture_progress = preload("res://Assets/BPprog-32x.png")
 		hardness = randi_range(2,8)
 	elif Globalvar.scoopingBING:
 		frame = 22
+		$ScoopProgress.texture_progress = preload("res://Assets/BINGprog-32x.png")
 		hardness = randi_range(8,24)
 	elif Globalvar.scoopingUBE:
 		frame = 23
+		$ScoopProgress.texture_progress = preload("res://Assets/UBEprog-32x.png")
 		hardness = randi_range(6,12)
 	else: push_error("An ice cream flavor was not found.")
-
+	$ScoopProgress.max_value = hardness
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Interact"):
 		hardness -= 1
+		$ScoopProgress.value += 1
 	if hardness <= 0:
 		Globalvar.scoopingVAN = false
 		Globalvar.scoopingCHOC = false

@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ddtnjss41dhy" path="res://Assets/BPTub-32x.png" id="23_2j85f"]
 [ext_resource type="Texture2D" uid="uid://bnnd2a061aomb" path="res://Assets/BINGTub-32x.png" id="24_70fi2"]
 [ext_resource type="Texture2D" uid="uid://bkqpt63nc70dx" path="res://Assets/UBETub-32x.png" id="25_v854r"]
+[ext_resource type="Texture2D" uid="uid://eljwebl0tnd2" path="res://Assets/VANprog-32x.png" id="27_i6pvx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mxyc4"]
 animations = [{
@@ -122,7 +123,11 @@ sprite_frames = SubResource("SpriteFrames_mxyc4")
 script = ExtResource("4_elj40")
 
 [node name="ScoopProgress" type="TextureProgressBar" parent="ScoopTub" unique_id=355858806]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -730.0
+offset_top = 333.0
+offset_right = 1062.0
+offset_bottom = 493.0
+scale = Vector2(0.8, 0.8)
+texture_progress = ExtResource("27_i6pvx")
 
 [connection signal="pressed" from="TestReturn" to="TestReturn" method="_on_pressed"]

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://4c6qvmuk6vp1" path="res://player_character.gd" id="1_yx7mw"]
 [ext_resource type="Texture2D" uid="uid://cjvlkx0d4uk7f" path="res://icon.svg" id="2_ykeeq"]
 [ext_resource type="Script" uid="uid://cx1x748fjsr48" path="res://scoop_cabinet_1.gd" id="4_4srsv"]
+[ext_resource type="Script" uid="uid://b2ec0ln0yk0be" path="res://exhaustion.gd" id="4_mf81u"]
 [ext_resource type="Script" uid="uid://c8x4oe503t1k6" path="res://scoop_cabinet_2.gd" id="5_mf81u"]
 [ext_resource type="Script" uid="uid://c5g0q13ww2u42" path="res://scoop_cabinet_3.gd" id="6_02kkc"]
 [ext_resource type="Script" uid="uid://cax7mhmrr8fkr" path="res://restock_area.gd" id="7_aomqu"]
@@ -76,6 +77,11 @@ offset_top = 66.0
 offset_right = 22.0
 offset_bottom = 89.0
 horizontal_alignment = 1
+
+[node name="Exhaustion" type="Timer" parent="PlayerCharacter" unique_id=253721509]
+wait_time = 2.0
+autostart = true
+script = ExtResource("4_mf81u")
 
 [node name="Impassable" type="StaticBody2D" parent="." unique_id=192715097]
 
@@ -160,6 +166,7 @@ script = ExtResource("9_jgkyn")
 position = Vector2(1082, 718)
 shape = SubResource("RectangleShape2D_txvy8")
 
+[connection signal="timeout" from="PlayerCharacter/Exhaustion" to="PlayerCharacter" method="_on_exhaustion_timeout"]
 [connection signal="body_entered" from="ScoopCabinet1" to="PlayerCharacter" method="_on_scoop_cabinet_1_body_entered"]
 [connection signal="body_exited" from="ScoopCabinet1" to="PlayerCharacter" method="_on_scoop_cabinet_1_body_exited"]
 [connection signal="body_entered" from="ScoopCabinet2" to="PlayerCharacter" method="_on_scoop_cabinet_2_body_entered"]

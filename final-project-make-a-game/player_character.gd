@@ -6,6 +6,7 @@ var Cab3Scoopable = false
 var CupsConesReachable = false
 var Restockable = false
 var Orderable = false
+var Scoopable = false
 const SPEED = 200.0
 
 func _ready() -> void:
@@ -29,13 +30,13 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Interact") and Cab1Scoopable:
+	if Input.is_action_just_pressed("Interact") and Scoopable and Cab1Scoopable:
 		Globalvar.savedposition = position
 		get_tree().change_scene_to_file("res://scoop_1.tscn")
-	elif Input.is_action_just_pressed("Interact") and Cab2Scoopable:
+	elif Input.is_action_just_pressed("Interact") and Scoopable and Cab2Scoopable:
 		Globalvar.savedposition = position
 		get_tree().change_scene_to_file("res://scoop_2.tscn")
-	elif Input.is_action_just_pressed("Interact") and Cab3Scoopable:
+	elif Input.is_action_just_pressed("Interact") and Scoopable and Cab3Scoopable:
 		Globalvar.savedposition = position
 		get_tree().change_scene_to_file("res://scoop_3.tscn")
 	else: pass
@@ -68,32 +69,35 @@ func _on_scoop_cabinet_3_body_exited(body: player) -> void:
 	Cab3Scoopable = false
 	$Instructions.text = ""
 
-func _on_restock_area_body_entered(body: Node2D) -> void:
+func _on_restock_area_body_entered(body: player) -> void:
 	print("Restockable.")
 	Restockable = true
 	$Instructions.text = "[SPACE] To Restock"
 
-func _on_restock_area_body_exited(body: Node2D) -> void:
+func _on_restock_area_body_exited(body: player) -> void:
 	print("No longer restockable.")
 	Restockable = false
 	$Instructions.text = ""
 
-func _on_cups_cones_area_body_entered(body: Node2D) -> void:
+func _on_cups_cones_area_body_entered(body: player) -> void:
 	print("Cups & Cones are reachable.")
 	CupsConesReachable = true
 	$Instructions.text = "[SPACE] To Pick a Cone/Cup"
 
-func _on_cups_cones_area_body_exited(body: Node2D) -> void:
+func _on_cups_cones_area_body_exited(body: player) -> void:
 	print("Cups & Cones are no longer reachable.")
 	CupsConesReachable = false
 	$Instructions.text = ""
 
-func _on_order_area_body_entered(body: Node2D) -> void:
+func _on_order_area_body_entered(body: player) -> void:
 	print("Orderable.")
 	Orderable = true
 	$Instructions.text = "[SPACE] To Take Order"
 
-func _on_order_area_body_exited(body: Node2D) -> void:
+func _on_order_area_body_exited(body: player) -> void:
 	print("No longer orderable.")
 	Orderable = false
 	$Instructions.text = ""
+
+func _on_exhaustion_timeout() -> void:
+	Scoopable = true
