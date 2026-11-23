@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://qtrojivky2xo"]
 
+[ext_resource type="Script" uid="uid://bms0ercfa2u33" path="res://scoop_1.gd" id="1_hxamk"]
 [ext_resource type="Script" uid="uid://c65y8e0n46o30" path="res://test_return.gd" id="1_t3f7h"]
 [ext_resource type="Texture2D" uid="uid://bjgytejviwph1" path="res://Assets/VANTub-32x.png" id="2_5cggr"]
 [ext_resource type="Script" uid="uid://dvehn5gpk36fx" path="res://van_tub.gd" id="2_vk06o"]
@@ -23,6 +24,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fbbt"]
 
 [node name="Scoop1" type="Node2D" unique_id=1727005983]
+script = ExtResource("1_hxamk")
 
 [node name="TestReturn" type="Button" parent="." unique_id=1426302315]
 visible = false

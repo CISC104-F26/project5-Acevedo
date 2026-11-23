@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b63ds5057osx2"]
 
 [ext_resource type="Texture2D" uid="uid://bvkday2i422d4" path="res://Assets/MCCTub-32x.png" id="1_b7cb2"]
+[ext_resource type="Script" uid="uid://35ibww0gu1rs" path="res://scoop_2.gd" id="1_dxsyv"]
 [ext_resource type="Script" uid="uid://c0irdyt76xll6" path="res://mcc_tub.gd" id="1_vf73h"]
 [ext_resource type="Texture2D" uid="uid://c873av8caq4n0" path="res://Assets/MNCTub-32x.png" id="2_ydxl6"]
 [ext_resource type="Script" uid="uid://bi1m3kphtm2kn" path="res://mnc_tub.gd" id="3_gw66u"]
@@ -20,6 +21,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxamk"]
 
 [node name="Scoop2" type="Node2D" unique_id=1540880311]
+script = ExtResource("1_dxsyv")
 
 [node name="MCCtub" type="Area2D" parent="." unique_id=501144491]
 position = Vector2(250, 150)

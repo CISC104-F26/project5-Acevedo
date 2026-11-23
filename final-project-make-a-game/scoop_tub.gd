@@ -109,6 +109,55 @@ func _process(delta: float) -> void:
 		hardness -= 1
 		$ScoopProgress.value += 1
 	if hardness <= 0:
+		if Globalvar.scoopingVAN:
+			Globalvar.scoopedVAN = true
+		elif Globalvar.scoopingCHOC:
+			Globalvar.scoopedCHOC = true
+		elif Globalvar.scoopingFLUFF:
+			Globalvar.scoopedFLUFF = true
+		elif Globalvar.scoopingRC:
+			Globalvar.scoopedRC = true
+		elif Globalvar.scoopingMUD:
+			Globalvar.scoopedMUD = true
+		elif Globalvar.scoopingBHT:
+			Globalvar.scoopedBHT = true
+		elif Globalvar.scoopingNINE:
+			Globalvar.scoopedNINE = true
+		elif Globalvar.scoopingPCL:
+			Globalvar.scoopedPCL = true
+		elif Globalvar.scoopingGMA:
+			Globalvar.scoopedGMA = true
+		elif Globalvar.scoopingMCC:
+			Globalvar.scoopedMCC = true
+		elif Globalvar.scoopingMNC:
+			Globalvar.scoopedMNC = true
+		elif Globalvar.scoopingPGT:
+			Globalvar.scoopedPGT = true
+		elif Globalvar.scoopingAN:
+			Globalvar.scoopedAN = true
+		elif Globalvar.scoopingCNC:
+			Globalvar.scoopedCNC = true
+		elif Globalvar.scoopingNOM:
+			Globalvar.scoopedNOM = true
+		elif Globalvar.scoopingTONA:
+			Globalvar.scoopedTONA = true
+		elif Globalvar.scoopingCDD:
+			Globalvar.scoopedCDD = true
+		elif Globalvar.scoopingPEACH:
+			Globalvar.scoopedPEACH = true
+		elif Globalvar.scoopingBR:
+			Globalvar.scoopedBR = true
+		elif Globalvar.scoopingSTRAW:
+			Globalvar.scoopedSTRAW = true
+		elif Globalvar.scoopingCOFFEE:
+			Globalvar.scoopedCOFFEE = true
+		elif Globalvar.scoopingBP:
+			Globalvar.scoopedBP = true
+		elif Globalvar.scoopingBING:
+			Globalvar.scoopedBING = true
+		elif Globalvar.scoopingUBE:
+			Globalvar.scoopedUBE = true
+		else: pass
 		Globalvar.scoopingVAN = false
 		Globalvar.scoopingCHOC = false
 		Globalvar.scoopingFLUFF = false

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d3qt6too30uya"]
 
+[ext_resource type="Script" uid="uid://dq08uaps7hl88" path="res://scoop_3.gd" id="1_2pm76"]
 [ext_resource type="Texture2D" uid="uid://0k2dnct8vd2j" path="res://Assets/PEACHTub-32x.png" id="1_4rhld"]
 [ext_resource type="Script" uid="uid://b4m3dv8tug1ui" path="res://peach_tub.gd" id="1_re77b"]
 [ext_resource type="Texture2D" uid="uid://daiqgkngapian" path="res://Assets/BRTub-32x.png" id="2_q51ws"]
@@ -18,6 +19,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fbbt"]
 
 [node name="Scoop3" type="Node2D" unique_id=1156393099]
+script = ExtResource("1_2pm76")
 
 [node name="PEACHtub" type="Area2D" parent="." unique_id=1662646382]
 position = Vector2(250, 150)

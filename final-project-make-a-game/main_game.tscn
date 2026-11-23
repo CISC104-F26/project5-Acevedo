@@ -10,6 +10,38 @@
 [ext_resource type="Script" uid="uid://cax7mhmrr8fkr" path="res://restock_area.gd" id="7_aomqu"]
 [ext_resource type="Script" uid="uid://dt7wsgpar64f5" path="res://cups_cones_area.gd" id="8_krmtw"]
 [ext_resource type="Script" uid="uid://b11s0scvtqlme" path="res://order_area.gd" id="9_jgkyn"]
+[ext_resource type="Texture2D" uid="uid://b4cw5f503cst4" path="res://Assets/wafflecone-32x.png" id="11_borgi"]
+[ext_resource type="Texture2D" uid="uid://buohsngoq3dj8" path="res://Assets/sugarcone-32x.png" id="12_ih6an"]
+[ext_resource type="Texture2D" uid="uid://bcryor0t3ii0i" path="res://Assets/cakecone-32x.png" id="13_umrn2"]
+[ext_resource type="Texture2D" uid="uid://cbij10gfdu4wo" path="res://Assets/smcup-32x.png" id="14_2i4tw"]
+[ext_resource type="Texture2D" uid="uid://bl4j5pvq77750" path="res://Assets/medcup-32x.png" id="15_euc45"]
+[ext_resource type="Texture2D" uid="uid://do2e0uf3lqyio" path="res://Assets/lgcup-32x.png" id="16_vn0ol"]
+[ext_resource type="Script" uid="uid://cpetu1pvbxl5v" path="res://cone_display.gd" id="17_wt57k"]
+[ext_resource type="Texture2D" uid="uid://ds18wl8o7hf23" path="res://Assets/VANscoop-32x.png" id="18_5fp36"]
+[ext_resource type="Texture2D" uid="uid://bqib5cxehb7na" path="res://Assets/CHOCscoop-32x.png" id="19_3cqky"]
+[ext_resource type="Texture2D" uid="uid://c80qjxcrff7xt" path="res://Assets/FLUFFscoop-32x.png" id="20_bj7hs"]
+[ext_resource type="Texture2D" uid="uid://w8wfj7cnsiue" path="res://Assets/RCscoop-32x.png" id="21_q1j2l"]
+[ext_resource type="Texture2D" uid="uid://5hs3tc2xep5x" path="res://Assets/MUDscoop-32x.png" id="22_0etra"]
+[ext_resource type="Texture2D" uid="uid://de6eqppn71lys" path="res://Assets/BHTscoop-32x.png" id="23_wktgk"]
+[ext_resource type="Texture2D" uid="uid://coyvq45pb5sdc" path="res://Assets/1923scoop-32x.png" id="24_swmw6"]
+[ext_resource type="Texture2D" uid="uid://dqgysh2dhehdw" path="res://Assets/PCLscoop-32x.png" id="25_shn6b"]
+[ext_resource type="Texture2D" uid="uid://o4hrujoveqgc" path="res://Assets/GMAscoop-32x.png" id="26_ck3nl"]
+[ext_resource type="Texture2D" uid="uid://cvfyh01swox50" path="res://Assets/MCCscoop-32x.png" id="27_ra47l"]
+[ext_resource type="Texture2D" uid="uid://br1vueyebpvr4" path="res://Assets/MNCscoop-32x.png" id="28_acj6b"]
+[ext_resource type="Texture2D" uid="uid://mvgng0y2vj12" path="res://Assets/PGTscoop-32x.png" id="29_564rt"]
+[ext_resource type="Texture2D" uid="uid://djnppqf3rpt7v" path="res://Assets/ANscoop-32x.png" id="30_wvtnb"]
+[ext_resource type="Texture2D" uid="uid://41paloef4tak" path="res://Assets/CNCscoop-32x.png" id="31_5gq48"]
+[ext_resource type="Texture2D" uid="uid://frjtmv3t5tty" path="res://Assets/NOMscoop-32x.png" id="32_4cty2"]
+[ext_resource type="Texture2D" uid="uid://ch1s3ju4sicje" path="res://Assets/TONAscoop-32x.png" id="33_tle26"]
+[ext_resource type="Texture2D" uid="uid://cj3vohw2uqflb" path="res://Assets/CDDscoop-32x.png" id="34_nqusy"]
+[ext_resource type="Texture2D" uid="uid://ij2aiibid25w" path="res://Assets/PEACHscoop-32x.png" id="35_b25i7"]
+[ext_resource type="Texture2D" uid="uid://dkkr1uhp7ojvc" path="res://Assets/BRscoop-32x.png" id="36_1dwal"]
+[ext_resource type="Texture2D" uid="uid://yqnr6h5d06s8" path="res://Assets/STRAWscoop-32x.png" id="37_31kh4"]
+[ext_resource type="Texture2D" uid="uid://xuemyrsy0x1f" path="res://Assets/COFFEEscoop-32x.png" id="38_wgrv0"]
+[ext_resource type="Texture2D" uid="uid://d2uiyq8v8hfxx" path="res://Assets/BPscoop-32x.png" id="39_ud73m"]
+[ext_resource type="Texture2D" uid="uid://eo7vb0gn0eyw" path="res://Assets/BINGscoop-32x.png" id="40_5ngum"]
+[ext_resource type="Texture2D" uid="uid://8chp5d050xo" path="res://Assets/UBEscoop-32x.png" id="41_md87r"]
+[ext_resource type="Script" uid="uid://wk7wgmtd58le" path="res://flavor_display.gd" id="42_047cl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0fbbt"]
 animations = [{
@@ -50,6 +82,112 @@ size = Vector2(100, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ht0ft"]
 size = Vector2(64, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mf81u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_borgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ih6an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_umrn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2i4tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_euc45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vn0ol")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_02kkc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_5fp36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3cqky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_bj7hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_q1j2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0etra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wktgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_swmw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_shn6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ck3nl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ra47l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_acj6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_564rt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_wvtnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_5gq48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_4cty2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_tle26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_nqusy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_b25i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_1dwal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_31kh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_wgrv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ud73m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_5ngum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_md87r")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="MainGame" type="Node2D" unique_id=1453307233]
 
@@ -165,6 +303,18 @@ script = ExtResource("9_jgkyn")
 [node name="OrderColl" type="CollisionShape2D" parent="OrderArea" unique_id=72071868]
 position = Vector2(1082, 718)
 shape = SubResource("RectangleShape2D_txvy8")
+
+[node name="ConeDisplay" type="AnimatedSprite2D" parent="." unique_id=927395596]
+position = Vector2(50, 850)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_mf81u")
+script = ExtResource("17_wt57k")
+
+[node name="FlavorDisplay" type="AnimatedSprite2D" parent="." unique_id=1502782827]
+position = Vector2(50, 780)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_02kkc")
+script = ExtResource("42_047cl")
 
 [connection signal="timeout" from="PlayerCharacter/Exhaustion" to="PlayerCharacter" method="_on_exhaustion_timeout"]
 [connection signal="body_entered" from="ScoopCabinet1" to="PlayerCharacter" method="_on_scoop_cabinet_1_body_entered"]
