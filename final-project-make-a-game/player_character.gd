@@ -7,7 +7,7 @@ var CupsConesReachable = false
 var Restockable = false
 var Orderable = false
 var Scoopable = false
-const SPEED = 200.0
+const SPEED = 10000.0
 
 func _ready() -> void:
 	if Globalvar.savedposition:
@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 1
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	velocity = velocity.normalized() * SPEED
+	velocity = velocity.normalized() * SPEED * delta
 	move_and_slide()
 
 func _process(delta: float) -> void:
@@ -39,6 +39,9 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_pressed("Interact") and Scoopable and Cab3Scoopable:
 		Globalvar.savedposition = position
 		get_tree().change_scene_to_file("res://scoop_3.tscn")
+	elif Input.is_action_just_pressed("Interact") and Scoopable and CupsConesReachable:
+		Globalvar.savedposition = position
+		get_tree().change_scene_to_file("res://cups_cones.tscn")
 	else: pass
 
 func _on_scoop_cabinet_1_body_entered(body: player) -> void:

@@ -11,11 +11,11 @@ func _ready() -> void:
 	elif Globalvar.scoopingCHOC:
 		frame = 1
 		$ScoopProgress.texture_progress = preload("res://Assets/CHOCprog-32x.png")
-		hardness = randi_range(10,25)
+		hardness = randi_range(10,35)
 	elif Globalvar.scoopingFLUFF:
 		frame = 2
 		$ScoopProgress.texture_progress = preload("res://Assets/FLUFFprog-32x.png")
-		hardness = randi_range(15,30)
+		hardness = randi_range(15,75)
 	elif Globalvar.scoopingRC:
 		frame = 3
 		$ScoopProgress.texture_progress = preload("res://Assets/RCprog-32x.png")
@@ -23,11 +23,11 @@ func _ready() -> void:
 	elif Globalvar.scoopingMUD:
 		frame = 4
 		$ScoopProgress.texture_progress = preload("res://Assets/MUDprog-32x.png")
-		hardness = randi_range(6,30)
+		hardness = randi_range(6,45)
 	elif Globalvar.scoopingBHT:
 		frame = 5
 		$ScoopProgress.texture_progress = preload("res://Assets/BHTprog-32x.png")
-		hardness = randi_range(10,20)
+		hardness = randi_range(10,25)
 	elif Globalvar.scoopingNINE:
 		frame = 6
 		$ScoopProgress.texture_progress = preload("res://Assets/1923prog-32x.png")
@@ -35,7 +35,7 @@ func _ready() -> void:
 	elif Globalvar.scoopingPCL:
 		frame = 7
 		$ScoopProgress.texture_progress = preload("res://Assets/PCLprog-32x.png")
-		hardness = randi_range(15,60)
+		hardness = randi_range(15,80)
 	elif Globalvar.scoopingGMA:
 		frame = 8
 		$ScoopProgress.texture_progress = preload("res://Assets/GMAprog-32x.png")
@@ -43,7 +43,7 @@ func _ready() -> void:
 	elif Globalvar.scoopingMCC:
 		frame = 9
 		$ScoopProgress.texture_progress = preload("res://Assets/MCCprog-32x.png")
-		hardness = randi_range(8,16)
+		hardness = randi_range(8,20)
 	elif Globalvar.scoopingMNC:
 		frame = 10
 		$ScoopProgress.texture_progress = preload("res://Assets/MNCprog-32x.png")
@@ -55,23 +55,23 @@ func _ready() -> void:
 	elif Globalvar.scoopingAN:
 		frame = 12
 		$ScoopProgress.texture_progress = preload("res://Assets/ANprog-32x.png")
-		hardness = randi_range(10,25)
+		hardness = randi_range(10,35)
 	elif Globalvar.scoopingCNC:
 		frame = 13
 		$ScoopProgress.texture_progress = preload("res://Assets/CNCprog-32x.png")
-		hardness = randi_range(7,15)
+		hardness = randi_range(7,18)
 	elif Globalvar.scoopingNOM:
 		frame = 14
 		$ScoopProgress.texture_progress = preload("res://Assets/NOMprog-32x.png")
-		hardness = randi_range(10,25)
+		hardness = randi_range(10,30)
 	elif Globalvar.scoopingTONA:
 		frame = 15
 		$ScoopProgress.texture_progress = preload("res://Assets/TONAprog-32x.png")
-		hardness = randi_range(3,10)
+		hardness = randi_range(4,15)
 	elif Globalvar.scoopingCDD:
 		frame = 16
 		$ScoopProgress.texture_progress = preload("res://Assets/CDDprog-32x.png")
-		hardness = randi_range(5,20)
+		hardness = randi_range(5,25)
 	elif Globalvar.scoopingPEACH:
 		frame = 17
 		$ScoopProgress.texture_progress = preload("res://Assets/PEACHprog-32x.png")
@@ -83,7 +83,7 @@ func _ready() -> void:
 	elif Globalvar.scoopingSTRAW:
 		frame = 19
 		$ScoopProgress.texture_progress = preload("res://Assets/STRAWprog-32x.png")
-		hardness = randi_range(8,20)
+		hardness = randi_range(8,25)
 	elif Globalvar.scoopingCOFFEE:
 		frame = 20
 		$ScoopProgress.texture_progress = preload("res://Assets/COFFEEprog-32x.png")
@@ -95,7 +95,7 @@ func _ready() -> void:
 	elif Globalvar.scoopingBING:
 		frame = 22
 		$ScoopProgress.texture_progress = preload("res://Assets/BINGprog-32x.png")
-		hardness = randi_range(8,24)
+		hardness = randi_range(8,30)
 	elif Globalvar.scoopingUBE:
 		frame = 23
 		$ScoopProgress.texture_progress = preload("res://Assets/UBEprog-32x.png")

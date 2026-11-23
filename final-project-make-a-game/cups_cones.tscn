@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://ctk7h21l53lo6"]
+
+[ext_resource type="Script" uid="uid://byxusvnl087hy" path="res://waffle_cone.gd" id="1_k7tr1"]
+[ext_resource type="Texture2D" uid="uid://b4cw5f503cst4" path="res://Assets/wafflecone-32x.png" id="2_tr7dv"]
+[ext_resource type="Script" uid="uid://cu1pd0vo1k538" path="res://sugar_cone.gd" id="3_0fhs0"]
+[ext_resource type="Texture2D" uid="uid://buohsngoq3dj8" path="res://Assets/sugarcone-32x.png" id="4_6mu7a"]
+[ext_resource type="Script" uid="uid://bhh0w6f6lvg4t" path="res://cake_cone.gd" id="5_evpg6"]
+[ext_resource type="Texture2D" uid="uid://bcryor0t3ii0i" path="res://Assets/cakecone-32x.png" id="6_jswvy"]
+[ext_resource type="Script" uid="uid://db036vtvy5o5t" path="res://small_cup.gd" id="7_ibsrk"]
+[ext_resource type="Texture2D" uid="uid://cbij10gfdu4wo" path="res://Assets/smcup-32x.png" id="8_icybk"]
+[ext_resource type="Script" uid="uid://chm8buavfwgmh" path="res://medium_cup.gd" id="9_hdycn"]
+[ext_resource type="Texture2D" uid="uid://dflgd1iwb3by5" path="res://Assets/medcup-64x.png" id="10_dd3y0"]
+[ext_resource type="Script" uid="uid://bvyngu1qk8ytm" path="res://large_cup.gd" id="11_qoon5"]
+[ext_resource type="Texture2D" uid="uid://6nshi65fahcv" path="res://Assets/lgcup-64x.png" id="12_tc2xa"]
+
+[node name="CupsCones" type="Node2D" unique_id=1599280778]
+
+[node name="WaffleCone" type="Area2D" parent="." unique_id=959559806]
+position = Vector2(420, 315)
+script = ExtResource("1_k7tr1")
+
+[node name="WaffleSprite" type="Sprite2D" parent="WaffleCone" unique_id=1260359742]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_tr7dv")
+
+[node name="WaffleColl" type="CollisionPolygon2D" parent="WaffleCone" unique_id=1424564692]
+polygon = PackedVector2Array(-15, 163, -97, -90, -100, -124, -22, -154, 47, -156, 78, -146, 97, -114, 96, -94, 15, 164)
+
+[node name="WaffleLabel" type="Label" parent="WaffleCone" unique_id=923658308]
+visible = false
+offset_left = -104.0
+offset_top = 159.0
+offset_right = 106.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 36
+text = "Waffle Cone"
+
+[node name="SugarCone" type="Area2D" parent="." unique_id=1763264137]
+position = Vector2(840, 315)
+script = ExtResource("3_0fhs0")
+
+[node name="SugarSprite" type="Sprite2D" parent="SugarCone" unique_id=1317861014]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_6mu7a")
+
+[node name="SugarColl" type="CollisionPolygon2D" parent="SugarCone" unique_id=419082660]
+polygon = PackedVector2Array(1, 116, -66, -44, -68, -96, -55, -109, 52, -109, 63, -97, 62, -40)
+
+[node name="SugarLabel" type="Label" parent="SugarCone" unique_id=463796173]
+visible = false
+offset_left = -98.0
+offset_top = 100.0
+offset_right = 99.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 36
+text = "Sugar Cone"
+
+[node name="CakeCone" type="Area2D" parent="." unique_id=24255305]
+position = Vector2(1260, 315)
+script = ExtResource("5_evpg6")
+
+[node name="CakeSprite" type="Sprite2D" parent="CakeCone" unique_id=1428593819]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_jswvy")
+
+[node name="CakeColl" type="CollisionPolygon2D" parent="CakeCone" unique_id=1975462330]
+polygon = PackedVector2Array(-45, 108, 43, 106, 43, 12, 62, 11, 63, -107, -63, -106, -64, 11, -45, 11)
+
+[node name="CakeLabel" type="Label" parent="CakeCone" unique_id=38917631]
+visible = false
+offset_left = -88.0
+offset_top = 105.0
+offset_right = 95.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 36
+text = "Cake Cone"
+
+[node name="SmallCup" type="Area2D" parent="." unique_id=1648167377]
+position = Vector2(420, 750)
+script = ExtResource("7_ibsrk")
+
+[node name="SmSprite" type="Sprite2D" parent="SmallCup" unique_id=186751381]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_icybk")
+
+[node name="SmColl" type="CollisionPolygon2D" parent="SmallCup" unique_id=310904836]
+polygon = PackedVector2Array(-44, 60, 43, 60, 44, 20, 75, 20, 74, -62, -72, -62, -72, 18, -42, 19)
+
+[node name="SmLabel" type="Label" parent="SmallCup" unique_id=462740811]
+visible = false
+offset_left = -83.0
+offset_top = 55.0
+offset_right = 89.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 36
+text = "Small Cup"
+
+[node name="MediumCup" type="Area2D" parent="." unique_id=1074859981]
+position = Vector2(840, 750)
+script = ExtResource("9_hdycn")
+
+[node name="MedSprite" type="Sprite2D" parent="MediumCup" unique_id=1787216733]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("10_dd3y0")
+
+[node name="MedColl" type="CollisionPolygon2D" parent="MediumCup" unique_id=1615793564]
+polygon = PackedVector2Array(-44, 71, 43, 74, 43, 24, 72, 26, 74, -76, -74, -76, -75, 25, -43, 25)
+
+[node name="MedLabel" type="Label" parent="MediumCup" unique_id=1874463083]
+visible = false
+offset_left = -108.0
+offset_top = 69.0
+offset_right = 113.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 36
+text = "Medium Cup"
+
+[node name="LargeCup" type="Area2D" parent="." unique_id=1369326932]
+position = Vector2(1260, 750)
+script = ExtResource("11_qoon5")
+
+[node name="LgSprite" type="Sprite2D" parent="LargeCup" unique_id=2029507376]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("12_tc2xa")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LargeCup" unique_id=131359101]
+polygon = PackedVector2Array(-42, 87, 44, 87, 44, 37, 76, 39, 75, -87, -76, -88, -73, 42, -45, 43)
+
+[node name="LgLabel" type="Label" parent="LargeCup" unique_id=1372279375]
+visible = false
+offset_left = -85.0
+offset_top = 81.0
+offset_right = 89.0
+offset_bottom = 131.0
+theme_override_font_sizes/font_size = 36
+text = "Large Cup"
+
+[connection signal="mouse_entered" from="WaffleCone" to="WaffleCone" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="WaffleCone" to="WaffleCone" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="SugarCone" to="SugarCone" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SugarCone" to="SugarCone" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CakeCone" to="CakeCone" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CakeCone" to="CakeCone" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="SmallCup" to="SmallCup" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SmallCup" to="SmallCup" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="MediumCup" to="MediumCup" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MediumCup" to="MediumCup" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="LargeCup" to="LargeCup" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="LargeCup" to="LargeCup" method="_on_mouse_exited"]
