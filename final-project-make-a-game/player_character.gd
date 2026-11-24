@@ -43,6 +43,23 @@ func _process(delta: float) -> void:
 		Globalvar.savedposition = position
 		get_tree().change_scene_to_file("res://cups_cones.tscn")
 	else: pass
+	if Input.is_action_pressed("move_up"):
+		rotation_degrees = 0
+	if Input.is_action_pressed("move_right"):
+		rotation_degrees = 90
+	if Input.is_action_pressed("move_down"):
+		rotation_degrees = 180
+	if Input.is_action_pressed("move_left"):
+		rotation_degrees = 270
+	if Input.is_action_pressed("move_up") and Input.is_action_pressed("move_right"):
+		rotation_degrees = 45
+	if Input.is_action_pressed("move_up") and Input.is_action_pressed("move_left"):
+		rotation_degrees = 315
+	if Input.is_action_pressed("move_down") and Input.is_action_pressed("move_right"):
+		rotation_degrees = 135
+	if Input.is_action_pressed("move_down") and Input.is_action_pressed("move_left"):
+		rotation_degrees = 225
+	
 
 func _on_scoop_cabinet_1_body_entered(body: player) -> void:
 	Cab1Scoopable = true
